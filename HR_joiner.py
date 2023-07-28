@@ -30,10 +30,12 @@ cwd = os.getcwd()
 source = os.path.join(cwd, 'HireRight_List.xlsx')
 
 # Set the new file name with date time
-destination = os.path.join(cwd, 'Backup', f'HireRight_List_{now_str}.xlsx')
+destination = os.path.join(cwd, '_Backup', f'HireRight_List_{now_str}.xlsx')
 
 # Move the file
 dest = shutil.move(source, destination)
 
 # Finally rename the new combined data to list
 os.rename('new_data.xlsx', 'HireRight_List.xlsx')
+
+print("Done")
